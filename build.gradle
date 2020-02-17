@@ -20,7 +20,9 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 }
-
+task stage(){
+	dependsOn ':EventRegistration-Backend:assemble'
+}
 test {
 	useJUnitPlatform()
 }
